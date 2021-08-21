@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Dogukan Turan | Blog</title>
+    <link>https://dogukanturan.com/tags/</link>
+    <description>Recent content in Tags on Dogukan Turan | Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dogukanturan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cluster</title>
+      <link>https://dogukanturan.com/tags/cluster/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dogukanturan.com/tags/cluster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k3d</title>
+      <link>https://dogukanturan.com/tags/k3d/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dogukanturan.com/tags/k3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://dogukanturan.com/tags/kubernetes/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dogukanturan.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
