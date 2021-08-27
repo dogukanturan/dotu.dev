@@ -74,7 +74,7 @@ params:
         safari_pinned_tab: "/posts/gopher.png"
 
     label:
-        text: "Dogukan Turan"
+        text: "/home/dturan"
         icon: /posts/gopher.png
         iconHeight: 45
 
