@@ -10,7 +10,6 @@ tocopen: false
 searchHidden: false
 
 ---
-
 # K3D Kurulumu
 
 Bundan önceki yazımda kind’ı ele almıştım ve kind aracını kullanarak nasıl kubernetes cluster’ı kurabileceğimizi ele almıştım(Kind hakkındaki yazıma buradan ulaşabilirsiniz). Şimdi ise Rancher’ın bir aracı olan K3D ile nasıl kubernetes cluster’ı oluşturabileceğimize değineceğim.
@@ -64,7 +63,7 @@ K3D kurulumu basit, yapmanız gereken terminale aşağıdaki komutu girmek. Dile
 ```
 $ wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 ```
-![1_I0hNdBXgOgL-VI9KOCHHRA.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606601738166/aYybiM3u1.png)
+![1.png](/posts/k3d-kubernetes/images/1.png)
 
 Sizde yukarıdaki resimdeki gibi bir çıktı aldıysanız kurulumu başarılı bir şekilde yaptınız demektir. İsterseniz versiyon kontrolü yaparak kurulumunuzu doğrulayabilirsiniz, bunun için terminalinize aşağıdaki komutu girmeniz gerekiyor.
 
@@ -97,11 +96,11 @@ Artık cluster kurulumuna geçebiliriz. Terminalinize aşağıdaki resimde oluş
 $ k3d cluster create [NAME]
 ``` 
 
-![1_H-2eVT95AM0j-ff9a34GXA.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606601983901/Hp8F2HXiU.png)
+![2.png](/posts/k3d-kubernetes/images/2.png)
 
 İlk cluster kurulumunda yaklaşık 150–200mb boyutunda docker image pull etmesi gerektiği için kurulum süresi internet hızınıza göre biraz zaman alabilir ama bu image’leri silmediğiniz sürece cluster kurulumunuz çok kısa sürecektir.
 
-![1_OJ79GPbAi2DzdK12tzGeSg.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606602003681/VK_4Us4Bb.png)
+![3.png](/posts/k3d-kubernetes/images/3.png)
 
 Resimdeki komut ile oluşturduğunuz cluster’ları ve durumlarını görebilirsiniz.
 
@@ -167,12 +166,11 @@ Yukardaki yaml dosyası ile deployment ve service yaratıyoruz. NodePort için 3
 ```
 $ kubectl create -f demo-nodeport.yaml
 ``` 
-![1_S9EdQVJCSfcP1W5gTkfhVQ.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606602334964/ZgC69K0I6.png)
+![4.png](/posts/k3d-kubernetes/images/4.png)
 
 Sorunsuz bir şekilde pod’unuz ve servisiniz oluşturulduysa tarayıcınızdan uygulamaya erişebilirsiniz. (IP:NODEPORT)
 
-![1_4CJGzHLx_5AlDM6FlA-AYw.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606602348006/sIUt1Y4fd.png)
-
+![5.png](/posts/k3d-kubernetes/images/5.png)
 
 # 3. Multi Node Cluster Kurulumu
 K3D ile birden fazla node’a sahip cluster da kurabilirsiniz. Biz 3 node’lu bir cluster kurulumu yapalım ve daha sonra node komutu ile çalışan cluster’a ek olarak 1 node daha ekleyelim öncelikle aşağıdaki komut ile K3D’ye 3 node’luk bir cluster kurmasını söylüyoruz.
@@ -194,8 +192,7 @@ $ k3d cluster list
 $ kubectl get node
 ``` 
 
-![1_pTu5-ZDHaJIUUOWanRQlQg.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606602480490/zIc16R4Gl.png)
-
+![6.png](/posts/k3d-kubernetes/images/6.png)
 
 ## 3.1 Node Ekleme
 Node’larımız başarılı bir şekilde oluştu ihtiyaca göre yeni bir node eklemek istersen ne yapmamız gerekiyor peki? Çok kolay bir şekilde aşağıdaki komut ile az önce oluşturduğumuz cluster’a node ekleyebiliriz.
@@ -204,4 +201,4 @@ Node’larımız başarılı bir şekilde oluştu ihtiyaca göre yeni bir node e
 $ k3d create node new-node --cluster [CLUSTER-NAME] --role server
 ``` 
 
-![1_zDySbpHAPpbWWLkPWaEvEg.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1606602516698/g_Ko8gFAa.png)
+![7.png](/posts/k3d-kubernetes/images/7.png)
