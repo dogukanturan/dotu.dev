@@ -95,8 +95,8 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Hi! Welcome to my personal blog"
-        Content: "^-^"
+        Title: ""
+        Content: ""
 
     socialIcons:
         - name: github
