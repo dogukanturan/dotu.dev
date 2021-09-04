@@ -18,7 +18,7 @@ K3S (Lightweight Kubernetes) K3S, 2019 yılında açık kaynak olarak rancher ta
 <link rel=mask-icon href=https://dogukanturan.com/posts/gopher.png>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <meta property="og:title" content="k3d ile kubernetes cluster kurulumu">
 <meta property="og:description" content="K3D Kurulumu Bundan önceki yazımda kind’ı ele almıştım ve kind aracını kullanarak nasıl kubernetes cluster’ı kurabileceğimizi ele almıştım(Kind hakkındaki yazıma buradan ulaşabilirsiniz). Şimdi ise Rancher’ın bir aracı olan K3D ile nasıl kubernetes cluster’ı oluşturabileceğimize değineceğim.
 K3S (Lightweight Kubernetes) K3S, 2019 yılında açık kaynak olarak rancher tarafından piyasaya sürüldü. K3S, 100mb’ın altında bir binary dosyası olarak tasarlanmıştır. Ayrıca sertifikalı bir Kubernetes aracıdır ve cross platform çalışabilme özelliğine sahiptir. K3S hafifliği sayesinde çok düşük sistemlerde bile kubernetes cluster’ı kurabilmemize olanak sağlıyor.">
@@ -161,18 +161,18 @@ K3S hafifliği sayesinde çok düşük sistemlerde bile kubernetes cluster’ı 
 </code></pre></div><h3 id=12---kubectl-kurulumu>1.2 - Kubectl Kurulumu<a hidden class=anchor aria-hidden=true href=#12---kubectl-kurulumu>#</a></h3>
 <p>Kubernetes API ile haberleşmek için Kubectl kurmamız gerekiyor, bunuda aşağıdaki adımları takip ederek kolaylıkla yapabilirsiniz.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ curl -LO <span style=color:#e6db74>&#34;https://storage.googleapis.com/kubernetes-release/release/</span><span style=color:#66d9ef>$(</span>curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt<span style=color:#66d9ef>)</span><span style=color:#e6db74>/bin/linux/amd64/kubectl&#34;</span>
-</code></pre></div><pre><code>$ chmod +x ./kubectl
-</code></pre><pre><code>$ sudo mv ./kubectl /usr/local/bin/kubectl
+</code></pre></div><pre tabindex=0><code>$ chmod +x ./kubectl
+</code></pre><pre tabindex=0><code>$ sudo mv ./kubectl /usr/local/bin/kubectl
 </code></pre><p>Tüm bu işlemlerden sonra aşağıdaki komut ile kubectl versiyon kontrolünü yapabilirsiniz.</p>
-<pre><code>kubectl version
+<pre tabindex=0><code>kubectl version
 </code></pre><h3 id=13---k3d-kurulumu>1.3 - K3D Kurulumu<a hidden class=anchor aria-hidden=true href=#13---k3d-kurulumu>#</a></h3>
 <p>K3D kurulumu basit, yapmanız gereken terminale aşağıdaki komutu girmek. Dilerseniz <a href=https://k3d.io/#installation>bu</a> adresten kurulum adımlarını kendi ortamınıza göre yapabilirsiniz.</p>
-<pre><code>$ wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+<pre tabindex=0><code>$ wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 </code></pre><p><img loading=lazy src=/posts/k3d-kubernetes/images/1.png alt=1.png>
 </p>
 <p>Sizde yukarıdaki resimdeki gibi bir çıktı aldıysanız kurulumu başarılı bir şekilde yaptınız demektir. İsterseniz versiyon kontrolü yaparak kurulumunuzu doğrulayabilirsiniz, bunun için terminalinize aşağıdaki komutu girmeniz gerekiyor.</p>
 <p>Versiyon kontrolü için bu komutu girin:</p>
-<pre><code>$ k3d --verison
+<pre tabindex=0><code>$ k3d --verison
 </code></pre><h2 id=14-k3d-komutları>1.4 K3D Komutları<a hidden class=anchor aria-hidden=true href=#14-k3d-komutları>#</a></h2>
 <h3 id=cluster-komutları>Cluster Komutları:<a hidden class=anchor aria-hidden=true href=#cluster-komutları>#</a></h3>
 <h3 id=k3d-cluster-komutu-ile>&lsquo;k3d cluster&rsquo; komutu ile:<a hidden class=anchor aria-hidden=true href=#k3d-cluster-komutu-ile>#</a></h3>
@@ -194,7 +194,7 @@ Cluster ismi yerine -a parametresi ile toplu seçim yapabilirsiniz.</li>
 </ul>
 <h2 id=15-k3d-ile-cluster-kurulumu>1.5 K3D ile Cluster Kurulumu<a hidden class=anchor aria-hidden=true href=#15-k3d-ile-cluster-kurulumu>#</a></h2>
 <p>Artık cluster kurulumuna geçebiliriz. Terminalinize aşağıdaki resimde oluşturduğum gibi sizde kendi oluşturduğunuz name ile cluster oluşturmaya başlayabilirsiniz.</p>
-<pre><code>$ k3d cluster create [NAME]
+<pre tabindex=0><code>$ k3d cluster create [NAME]
 </code></pre><p><img loading=lazy src=/posts/k3d-kubernetes/images/2.png alt=2.png>
 </p>
 <p>İlk cluster kurulumunda yaklaşık 150–200mb boyutunda docker image pull etmesi gerektiği için kurulum süresi internet hızınıza göre biraz zaman alabilir ama bu image’leri silmediğiniz sürece cluster kurulumunuz çok kısa sürecektir.</p>
@@ -202,17 +202,17 @@ Cluster ismi yerine -a parametresi ile toplu seçim yapabilirsiniz.</li>
 </p>
 <p>Resimdeki komut ile oluşturduğunuz cluster’ları ve durumlarını görebilirsiniz.</p>
 <p>Bu şekilde eğer uzak bir sunucuya k3d kurulumu yapıp cluster’ı bu ortamda oluşturduysanız bir uygulama deploy ettiğiniz zaman buna erişemezsiniz. Çünkü herhangi bir port’a izin vermediğimiz için sadece cluster içinden erişime açık olacaktır. Oluşturduğunuz cluster’ı aşağıdaki komut ile silebilirsiniz. Sonraki adımda uygulamalarımıza nasıl erişebiliriz buna değineceğim.</p>
-<pre><code>$ k3d cluster delete -a --&gt; Tüm cluster'ları siler
+<pre tabindex=0><code>$ k3d cluster delete -a --&gt; Tüm cluster'ları siler
 $ k3d cluster delete [name] --&gt; Belirtilen cluster'ı siler
 </code></pre><h1 id=2-servislere-erişmek>2. Servislere Erişmek<a hidden class=anchor aria-hidden=true href=#2-servislere-erişmek>#</a></h1>
 <p>Kind yazımda kind’ın henüz çok yeni olduğunu bir takım sorunlarının olduğunu söylemiştim, bunlardan biriside eğer kind’ı local ortamımıza değilde uzak bir sunucuya kurduysak port açmanın meşakatli bir iş olmasıydı. Elle tek tek port açmamız gerekiyordu ve çalışan bir cluster’da yeni bir açılmamış port ihtiyacımız olduğu takdirde cluster’ı silip tekrar config dosyasını ayarlayıp ayağa kaldırmamız gerekiyordu. K3D kullanırkende öncesinde port açmamız gerekiyor fakat bunun için bize bir çok yol sunmakta, ister node-port olarak istersek de Load Balancer aracılığı ile uygulamalarımıza erişebiliyoruz.</p>
 <h2 id=21-k3d-nodeport-ayarları>2.1 K3D NodePort Ayarları<a hidden class=anchor aria-hidden=true href=#21-k3d-nodeport-ayarları>#</a></h2>
 <p>Kind yazısında da belirttiğimiz gibi, port açmak için elle tek tek portları config dosyasına girmemiz gerekiyordu ve çalışan cluster’da yeni bir pod ihtiyacımız doğduğunda cluster’ı silip tekrar ayağa kaldırmamız gerekiyordu.
 K3D bu noktada Kind’dan ayrılıyor çünkü k3d ile port açmak için belli bir port aralığını açmasını söyleyebiliyoruz. Hemen aşağıdaki örnek ile anlatmaya devam edeyim.</p>
-<pre><code>$ k3d cluster create [NAME] -p &quot;30000-30100:30000-30100@server[0]&quot;
+<pre tabindex=0><code>$ k3d cluster create [NAME] -p &quot;30000-30100:30000-30100@server[0]&quot;
 </code></pre><p>Yukarıdaki komutta yeni bir parametre ekledik “-p” docker kullananlar bu komutu sık sık kullanmıştır -p(publish) komutu ile host-container portu açabiliyoruz. Yukarıda da bu işlemi yaptık 30000–30100 aralığını hem host tarafında hemde container tarafında açmasını söylüyorum. (Kubernetes default node port aralığı: 30000–32767)</p>
 <p>Şimdi yukarda yaptığımız nginx uygulamasını bu sefer nodeport açarak yapalım demo-nodeport.yaml isimli bir dosya oluşturun ve aşağıdaki kodu içerisine ekleyip kaydedin.</p>
-<pre><code>apiVersion: apps/v1
+<pre tabindex=0><code>apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo
@@ -245,7 +245,7 @@ spec:
     port:  80
     nodePort: 30050
 </code></pre><p>Yukardaki yaml dosyası ile deployment ve service yaratıyoruz. NodePort için 30050 adresini kullanacağım ben siz de açtığınız aralıktan bir port belirleyip belirlediğiniz port üzerinden uygulamaya erişebilirsiniz. Şimdi demo-nodeport.yaml dosyasını çalıştıralım.</p>
-<pre><code>$ kubectl create -f demo-nodeport.yaml
+<pre tabindex=0><code>$ kubectl create -f demo-nodeport.yaml
 </code></pre><p><img loading=lazy src=/posts/k3d-kubernetes/images/4.png alt=4.png>
 </p>
 <p>Sorunsuz bir şekilde pod’unuz ve servisiniz oluşturulduysa tarayıcınızdan uygulamaya erişebilirsiniz. (IP:NODEPORT)</p>
@@ -253,17 +253,17 @@ spec:
 </p>
 <h1 id=3-multi-node-cluster-kurulumu>3. Multi Node Cluster Kurulumu<a hidden class=anchor aria-hidden=true href=#3-multi-node-cluster-kurulumu>#</a></h1>
 <p>K3D ile birden fazla node’a sahip cluster da kurabilirsiniz. Biz 3 node’lu bir cluster kurulumu yapalım ve daha sonra node komutu ile çalışan cluster’a ek olarak 1 node daha ekleyelim öncelikle aşağıdaki komut ile K3D’ye 3 node’luk bir cluster kurmasını söylüyoruz.</p>
-<pre><code>$ k3d cluster create [NAME] --servers 3
+<pre tabindex=0><code>$ k3d cluster create [NAME] --servers 3
 </code></pre><p>Node’lar oluştuktan sonra aşağıdaki komut’lar ile node’larımızın durumunu görebiliriz.</p>
-<pre><code>[K3D İLE KONTROL ETME]
+<pre tabindex=0><code>[K3D İLE KONTROL ETME]
 $ k3d cluster list
-</code></pre><pre><code>[KUBECTL İLE KONTROL ETME]
+</code></pre><pre tabindex=0><code>[KUBECTL İLE KONTROL ETME]
 $ kubectl get node
 </code></pre><p><img loading=lazy src=/posts/k3d-kubernetes/images/6.png alt=6.png>
 </p>
 <h2 id=31-node-ekleme>3.1 Node Ekleme<a hidden class=anchor aria-hidden=true href=#31-node-ekleme>#</a></h2>
 <p>Node’larımız başarılı bir şekilde oluştu ihtiyaca göre yeni bir node eklemek istersen ne yapmamız gerekiyor peki? Çok kolay bir şekilde aşağıdaki komut ile az önce oluşturduğumuz cluster’a node ekleyebiliriz.</p>
-<pre><code>$ k3d create node new-node --cluster [CLUSTER-NAME] --role server
+<pre tabindex=0><code>$ k3d create node new-node --cluster [CLUSTER-NAME] --role server
 </code></pre><p><img loading=lazy src=/posts/k3d-kubernetes/images/7.png alt=7.png>
 </p>
 </div>
