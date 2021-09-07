@@ -95,7 +95,7 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Loading posts..."
+        Title: "Uploading posts..."
         Content: ""
 
     socialIcons:
