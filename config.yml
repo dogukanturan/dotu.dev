@@ -96,7 +96,7 @@ params:
     # home-info mode
     homeInfoParams:
         Title: "Uploading posts..."
-        Content: "DevOps Engineer at (Kartaca)[kartaca.com]"
+        Content: "DevOps Engineer at Kartaca"
 
     socialIcons:
         - name: github
