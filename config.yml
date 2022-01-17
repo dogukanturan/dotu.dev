@@ -47,7 +47,7 @@ params:
     keywords: [DevOps, IT, Software, Developer, DevSecOps]
     author: Dogukan Turan
     DateFormat: "January 2, 2006"
-    defaultTheme: auto # dark, light
+    defaultTheme: dark # dark, light
     disableThemeToggle: false
 
     #POST CONFIGS
@@ -66,7 +66,7 @@ params:
 
     assets:
         disableHLJS: true # to disable highlight.js
-        # disableFingerprinting: true
+        disableFingerprinting: true
         favicon: "/posts/gopher.png"
         favicon16x16: "/posts/gopher.png"
         favicon32x32: "/posts/gopher.png"
@@ -75,7 +75,7 @@ params:
 
     label:
         text: "/home/dturan"
-        icon: /posts/gopher.png
+        icon: /posts/me.jpeg
         iconHeight: 45
 
     # profile-mode
@@ -95,7 +95,7 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Uploading posts..."
+        Title: ":(){ :|:& };:"
         Content: "DevOps Engineer at Kartaca"
 
     socialIcons:
