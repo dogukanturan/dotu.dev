@@ -78,14 +78,36 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>k3d ile kubernetes cluster kurulumu</h2>
+<h2>Helm 101</h2>
 </header>
 <section class=entry-content>
-<p>K3D Kurulumu Bundan önceki yazımda kind’ı ele almıştım ve kind aracını kullanarak nasıl kubernetes cluster’ı kurabileceğimizi ele almıştım(Kind hakkındaki yazıma buradan ulaşabilirsiniz). Şimdi ise Rancher’ın bir aracı olan K3D ile nasıl kubernetes cluster’ı oluşturabileceğimize değineceğim.
+<p>Helm, Kubernetes için geliştirilmiş bir paket yöneticisidir. Bunu Linux ortamındaki apt veya yum gibi düşünebilirsiniz, helm bizim için kubernetes ortamında çalışan uygulamalarımızın kaynaklarını (deployment, statefulset, service, ingress vb.) kolayca yönetebilmemizi ve karmaşıklıklardan kurtulmamızı sağlar.
+Peki helm tüm bunları nasıl yapıyor? Helm, chart dediği yapıyı kullanarak uygulamamıza ait olan tüm kaynakları tek bir noktadan yönetmemizi sağlıyor, örneğin bir web uygulamamızın olduğunu ve bu uygulamanın elasticsearch, mysql gibi bağımlılıklarının olduğunu düşünelim, uygulamamız için kubernetes kaynaklarını oluşturduktan sonra bağımlılıkları için de aynı şekilde bu kaynakları hazırlamamız gerekiyor....</p>
+</section>
+<footer class=entry-footer>January 17, 2022&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Dogukan Turan</footer>
+<a class=entry-link aria-label="post link to Helm 101" href=https://dogukanturan.com/posts/helm-101/helm-101/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>K3D ile Kubernetes Cluster Kurulumu</h2>
+</header>
+<section class=entry-content>
+<p>Giriş Bundan önceki yazımda kind’ı ele almıştım ve kind aracını kullanarak nasıl kubernetes cluster’ı kurabileceğimizi ele almıştım(Kind hakkındaki yazıma buradan ulaşabilirsiniz). Şimdi ise Rancher’ın bir aracı olan K3D ile nasıl kubernetes cluster’ı oluşturabileceğimize değineceğim.
 K3S (Lightweight Kubernetes) K3S, 2019 yılında açık kaynak olarak rancher tarafından piyasaya sürüldü. K3S, 100mb’ın altında bir binary dosyası olarak tasarlanmıştır. Ayrıca sertifikalı bir Kubernetes aracıdır ve cross platform çalışabilme özelliğine sahiptir. K3S hafifliği sayesinde çok düşük sistemlerde bile kubernetes cluster’ı kurabilmemize olanak sağlıyor....</p>
 </section>
 <footer class=entry-footer>November 3, 2020&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Dogukan Turan</footer>
-<a class=entry-link aria-label="post link to k3d ile kubernetes cluster kurulumu" href=https://dogukanturan.com/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/></a>
+<a class=entry-link aria-label="post link to K3D ile Kubernetes Cluster Kurulumu" href=https://dogukanturan.com/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Virtualization ve Hypervisor Nedir?</h2>
+</header>
+<section class=entry-content>
+<p>Nedir bu virtualization?
+Sanallaştırma, gerçek donanımdan soyutlanmış bir layer(katman)’da bir bilgisayar sisteminin sanal bir kopyasını çalıştırma işlemidir. Kısaca, bir bilgisayar sisteminde aynı anda birden fazla işletim sisteminin çalıştırılması anlamına gelir. Sanallaştırmayı kullanmamızın birçok nedeni vardır. Bu nedenlerden en yaygın olanı ise, bilgisayar değiştirmek veya uygulamalarımızı farklı platformlarda test etmek ve ve vee linux ile windows işletim sistemlerinin ikisine’de ihtiyacın doğması. Kendimden örnek vermek gerekirse; kişisel bilgisayarıma linux(herhangi birisi) kurulumu yapınca tam istediğim performansta çalışmaması durumunda sanal olarak linux kullanmam gösterilebilir....</p>
+</section>
+<footer class=entry-footer>February 7, 2020&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Dogukan Turan</footer>
+<a class=entry-link aria-label="post link to Virtualization ve Hypervisor Nedir?" href=https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/></a>
 </article>
 </main>
 <footer class=footer>
