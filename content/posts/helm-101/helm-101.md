@@ -20,7 +20,7 @@ Peki helm tüm bunları nasıl yapıyor? Helm, chart dediği yapıyı kullanarak
  Chart, Helmin kullandığı paketleme biçimidir. Kubernetes ortamında ki uygulamalarımızı chart ile versiyonlayıp, paketleyebiliriz. Yeni bir helm chart oluşturduğumuzda varsayılan olarak gelen bazı klasörler ve dosyalar bulunmakta. Bu dosyaları incelemek gerekirse;
 
  ```
- kartaca-app/
+demo/
   Chart.yaml          # Chart hakkında bilgileri içeren bir yaml dosyası.
   LICENSE             # Chart lisansını içeren dosya (opsiyonel)
   README.md           # Chart kullanımı veya farklı bilgiler için readme dosyası. (opsiyonel)
