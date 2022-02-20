@@ -1,5 +1,5 @@
 baseURL: "https://dogukanturan.com/"
-title: Dogukan Turan | Blog
+title: "Dogukan Turan"
 paginate: 5
 theme: PaperMod
 enableRobotsTXT: true
@@ -14,17 +14,17 @@ minify:
 menu:
     main:
         - identifier: archives
-          name: Archives
+          name: Posts
           url: /archives/
           weight: 10
         - identifier: categories
           name: Categories
           url: /categories/
           weight: 20
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 30
+        # - identifier: tags
+        #   name: Tags
+        #   url: /tags/
+        #   weight: 30
         - identifier: search
           name: Search
           url: /search/
@@ -38,23 +38,23 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
+    - JSON
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    env: production
     title: DevOpsGuy
     description: "A personal blog where I write what I've learned in devops and IT world"
     keywords: [DevOps, IT, Software, Developer, DevSecOps]
     author: Dogukan Turan
     DateFormat: "January 2, 2006"
-    defaultTheme: dark # dark, light
+    defaultTheme: dark
     disableThemeToggle: false
 
     #POST CONFIGS
     ShowReadingTime: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowPostNavLinks: true
-    ShowBreadCrumbs: true
+    ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     disableSpecial1stPost: false
     disableScrollToTop: false
@@ -65,35 +65,34 @@ params:
     tocopen: false
 
     assets:
-        disableHLJS: true # to disable highlight.js
+        disableHLJS: false # to disable highlight.js
         disableFingerprinting: true
-        favicon: "/posts/gopher.png"
-        favicon16x16: "/posts/gopher.png"
-        favicon32x32: "/posts/gopher.png"
-        apple_touch_icon: "/posts/gopher.png"
-        safari_pinned_tab: "/posts/gopher.png"
+        favicon: "/posts/me.jpeg"
+        favicon16x16: "/posts/me.jpeg"
+        favicon32x32: "/posts/me.jpeg"
+        apple_touch_icon: "/posts/me.jpeg"
+        safari_pinned_tab: "/posts/me.jpeg"
 
     label:
-        text: "/home/dturan"
-        icon: /posts/me.jpeg
+        text: "~dturan"
+        icon: ""
         iconHeight: 45
 
     # profile-mode
     profileMode:
-        enabled: false # needs to be explicitly set
-        title: ExampleSite
-        subtitle: "This is subtitle"
-        imageUrl: "<img location>"
-        imageWidth: 120
-        imageHeight: 120
-        imageTitle: my image
+        enabled: true
+        title: Dogukan Turan
+        subtitle: "DevOps Engineer at Kartaca"
+        imageUrl: "/posts/me.jpeg"
+        imageWidth: 200
+        imageHeight: 200
+        imageTitle: image
         buttons:
-            - name: Posts
+            - name: Blog
               url: posts
-            - name: Tags
-              url: tags
+            - name: Archives
+              url: archives
 
-    # home-info mode
     homeInfoParams:
         Title: ":(){ :|:& };:"
         Content: "DevOps Engineer at Kartaca"
