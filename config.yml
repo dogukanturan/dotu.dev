@@ -12,27 +12,27 @@ minify:
     minifyOutput: true
 
 menu:
-    main:
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 10
-        - identifier: categories
-          name: Categories
-          url: /categories/
-          weight: 20
-        # - identifier: tags
-        #   name: Tags
-        #   url: /tags/
-        #   weight: 30
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 40
-        - identifier: gpg
-          name: GPG
-          url: /gpg/
-          weight: 50
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    - identifier: gpg
+      name: GPG
+      url: /gpg/
+      weight: 50
 
 outputs:
   home:
@@ -41,87 +41,85 @@ outputs:
     - JSON
 
 params:
-    env: production
-    title: DevOpsGuy
-    description: "A personal blog where I write what I've learned in devops and IT world"
-    keywords: [DevOps, IT, Software, Developer, DevSecOps]
-    author: Dogukan Turan
-    DateFormat: "January 2, 2006"
-    defaultTheme: dark
-    disableThemeToggle: false
+  env: production
+  title: DevOpsGuy
+  description: "A personal blog where I write what I've learned in devops and IT world"
+  keywords: [DevOps, Software, Developer, DevSecOps]
+  author: Dogukan Turan
+  DateFormat: "2006 January 2"
+  defaultTheme: dark
+  disableThemeToggle: false
 
-    #POST CONFIGS
-    ShowReadingTime: true
-    ShowShareButtons: false
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    disableSpecial1stPost: false
-    disableScrollToTop: false
-    comments: false
-    hidemeta: false
-    hideSummary: false
-    showtoc: false
-    tocopen: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
-    assets:
-        disableHLJS: false # to disable highlight.js
-        disableFingerprinting: true
-        favicon: "/posts/me.jpeg"
-        favicon16x16: "/posts/me.jpeg"
-        favicon32x32: "/posts/me.jpeg"
-        apple_touch_icon: "/posts/me.jpeg"
-        safari_pinned_tab: "/posts/me.jpeg"
+  assets:
+      disableHLJS: false # to disable highlight.js
+      disableFingerprinting: true
+      favicon: "/posts/me.jpeg"
+      favicon16x16: "/posts/me.jpeg"
+      favicon32x32: "/posts/me.jpeg"
+      apple_touch_icon: "/posts/me.jpeg"
+      safari_pinned_tab: "/posts/me.jpeg"
 
-    label:
-        text: "~dturan"
-        icon: ""
-        iconHeight: 45
+  label:
+      text: "~dturan"
+      icon: ""
+      iconHeight: 45
 
-    # profile-mode
-    profileMode:
-        enabled: true
-        title: Dogukan Turan
-        subtitle: "DevOps Engineer at Kartaca"
-        imageUrl: "/posts/me.jpeg"
-        imageWidth: 200
-        imageHeight: 200
-        imageTitle: image
-        buttons:
-            - name: Blog
-              url: posts
-            - name: Archives
-              url: archives
+  homeInfoParams:
+      Title: ":(){ :|:& };:"
+      Content: "DevOps Engineer at Kartaca"
 
-    homeInfoParams:
-        Title: ":(){ :|:& };:"
-        Content: "DevOps Engineer at Kartaca"
+  profileMode:
+      enabled: true
+      title: Dogukan Turan
+      subtitle: "DevOps Engineer at Kartaca"
+      imageUrl: "/posts/me.jpeg"
+      imageWidth: 200
+      imageHeight: 200
+      imageTitle: image
+      buttons:
+          - name: Blog
+            url: posts
+          - name: Archives
+            url: archives
 
-    socialIcons:
-        - name: github
-          url: "https://github.com/dogukanturan"
-        - name: twitter
-          url: "https://twitter.com/imdotu"
-        - name: linkedin
-          url: "https://linkedin.com/in/dogukanturan"
-        - name: medium
-          url: "https://devopsguy.medium.com"
-        - name: rss
-          url: "/index.xml"
+  socialIcons:
+      - name: github
+        url: "https://github.com/dogukanturan"
+      - name: twitter
+        url: "https://twitter.com/imdotu"
+      - name: linkedin
+        url: "https://linkedin.com/in/dogukanturan"
+      - name: medium
+        url: "https://devopsguy.medium.com"
+      - name: rss
+        url: "/index.xml"
 
-    cover:
-        hidden: false # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
-        hiddenInSingle: false # hide on single page
-        linkFullImages: false
+  cover:
+      hidden: false
+      hiddenInList: true
+      hiddenInSingle: false
+      linkFullImages: false
 
-    # for search
-    # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      location: 0
+      distance: 1000
+      threshold: 0.4
+      minMatchCharLength: 0
+      keys: ["title", "permalink", "summary", "content"]
