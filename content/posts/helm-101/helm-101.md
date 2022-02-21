@@ -8,6 +8,11 @@ description: "Helm Nedir? Uygulamalarımızı helm ile nasıl deploy edebiliriz?
 showtoc: true
 tocopen: false
 searchHidden: false
+cover:
+    image: "/posts/helm-101/images/helm.png"
+    relative: false
+    hidden: false
+
 ---
 
 Helm, Kubernetes için geliştirilmiş bir paket yöneticisidir. Bunu Linux ortamındaki apt veya yum gibi düşünebilirsiniz, helm bizim için kubernetes ortamında çalışan uygulamalarımızın kaynaklarını (deployment, statefulset, service, ingress vb.) kolayca yönetebilmemizi ve karmaşıklıklardan kurtulmamızı sağlar.

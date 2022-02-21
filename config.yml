@@ -14,7 +14,7 @@ minify:
 menu:
     main:
         - identifier: archives
-          name: Posts
+          name: Archives
           url: /archives/
           weight: 10
         - identifier: categories
