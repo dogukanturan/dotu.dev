@@ -27,7 +27,7 @@ jobs:
       run: hugo --minify --verbose
 
     - name: Create cname file
-      run: echo 'dogukanturan.com' > public/CNAME
+      run: echo 'dotu.dev' > public/CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
