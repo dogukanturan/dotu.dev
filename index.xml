@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dogukan Turan</title>
-    <link>https://dogukanturan.com/</link>
+    <link>https://dotu.dev/</link>
     <description>Recent content on Dogukan Turan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dogukanturan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dotu.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Helm 101</title>
-      <link>https://dogukanturan.com/posts/helm-101/helm-101/</link>
+      <link>https://dotu.dev/posts/helm-101/helm-101/</link>
       <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://dogukanturan.com/posts/helm-101/helm-101/</guid>
+      <guid>https://dotu.dev/posts/helm-101/helm-101/</guid>
       <description>Helm Nedir? Uygulamalarımızı helm ile nasıl deploy edebiliriz?</description>
     </item>
     
     <item>
       <title>GPG Public Key</title>
-      <link>https://dogukanturan.com/gpg/</link>
+      <link>https://dotu.dev/gpg/</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dogukanturan.com/gpg/</guid>
+      <guid>https://dotu.dev/gpg/</guid>
       <description>-----BEGIN PGP PUBLIC KEY BLOCK----- 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 =1oVl -----END PGP PUBLIC KEY BLOCK----- </description>
     </item>
     
     <item>
       <title>K3D ile Kubernetes Cluster Kurulumu</title>
-      <link>https://dogukanturan.com/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</link>
+      <link>https://dotu.dev/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dogukanturan.com/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</guid>
+      <guid>https://dotu.dev/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</guid>
       <description>Giriş Bundan önceki yazımda kind’ı ele almıştım ve kind aracını kullanarak nasıl kubernetes cluster’ı kurabileceğimizi ele almıştım(Kind hakkındaki yazıma buradan ulaşabilirsiniz). Şimdi ise Rancher’ın bir aracı olan K3D ile nasıl kubernetes cluster’ı oluşturabileceğimize değineceğim.
 K3S (Lightweight Kubernetes) K3S, 2019 yılında açık kaynak olarak rancher tarafından piyasaya sürüldü. K3S, 100mb’ın altında bir binary dosyası olarak tasarlanmıştır. Ayrıca sertifikalı bir Kubernetes aracıdır ve cross platform çalışabilme özelliğine sahiptir. K3S hafifliği sayesinde çok düşük sistemlerde bile kubernetes cluster’ı kurabilmemize olanak sağlıyor.</description>
     </item>
     
     <item>
       <title>Virtualization ve Hypervisor Nedir?</title>
-      <link>https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</link>
+      <link>https://dotu.dev/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</guid>
+      <guid>https://dotu.dev/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</guid>
       <description>Nedir bu virtualization?
 Sanallaştırma, gerçek donanımdan soyutlanmış bir layer(katman)’da bir bilgisayar sisteminin sanal bir kopyasını çalıştırma işlemidir. Kısaca, bir bilgisayar sisteminde aynı anda birden fazla işletim sisteminin çalıştırılması anlamına gelir. Sanallaştırmayı kullanmamızın birçok nedeni vardır. Bu nedenlerden en yaygın olanı ise, bilgisayar değiştirmek veya uygulamalarımızı farklı platformlarda test etmek ve ve vee linux ile windows işletim sistemlerinin ikisine’de ihtiyacın doğması. Kendimden örnek vermek gerekirse; kişisel bilgisayarıma linux(herhangi birisi) kurulumu yapınca tam istediğim performansta çalışmaması durumunda sanal olarak linux kullanmam gösterilebilir.</description>
     </item>

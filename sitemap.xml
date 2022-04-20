@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dogukanturan.com/categories/</loc>
+    <loc>https://dotu.dev/categories/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/cluster/</loc>
+    <loc>https://dotu.dev/tags/cluster/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/categories/devops/</loc>
+    <loc>https://dotu.dev/categories/devops/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/</loc>
+    <loc>https://dotu.dev/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/helm/</loc>
+    <loc>https://dotu.dev/tags/helm/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/posts/helm-101/helm-101/</loc>
+    <loc>https://dotu.dev/posts/helm-101/helm-101/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/categories/kubernetes/</loc>
+    <loc>https://dotu.dev/tags/kubernetes/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/kubernetes/</loc>
+    <loc>https://dotu.dev/categories/kubernetes/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/posts/</loc>
+    <loc>https://dotu.dev/posts/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/</loc>
+    <loc>https://dotu.dev/tags/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/gpg/</loc>
+    <loc>https://dotu.dev/gpg/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/k3d/</loc>
+    <loc>https://dotu.dev/tags/k3d/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</loc>
+    <loc>https://dotu.dev/posts/k3d-kubernetes/k3d-ile-kubernetes-cluster-kurulumu/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/hyperv/</loc>
+    <loc>https://dotu.dev/tags/hyperv/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/hypervisor/</loc>
+    <loc>https://dotu.dev/tags/hypervisor/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/categories/virtualization/</loc>
+    <loc>https://dotu.dev/tags/virtualization/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/tags/virtualization/</loc>
+    <loc>https://dotu.dev/categories/virtualization/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</loc>
+    <loc>https://dotu.dev/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</loc>
     <lastmod>2020-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dogukanturan.com/archives/</loc>
+    <loc>https://dotu.dev/archives/</loc>
   </url><url>
-    <loc>https://dogukanturan.com/search/</loc>
+    <loc>https://dotu.dev/search/</loc>
   </url>
 </urlset>

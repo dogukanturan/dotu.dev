@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>virtualization on Dogukan Turan</title>
-    <link>https://dogukanturan.com/tags/virtualization/</link>
+    <link>https://dotu.dev/tags/virtualization/</link>
     <description>Recent content in virtualization on Dogukan Turan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dogukanturan.com/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dotu.dev/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtualization ve Hypervisor Nedir?</title>
-      <link>https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</link>
+      <link>https://dotu.dev/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dogukanturan.com/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</guid>
+      <guid>https://dotu.dev/posts/virtualization-ve-hypervisor/virtualization-ve-hypervisor-nedir/</guid>
       <description>Nedir bu virtualization?
 Sanallaştırma, gerçek donanımdan soyutlanmış bir layer(katman)’da bir bilgisayar sisteminin sanal bir kopyasını çalıştırma işlemidir. Kısaca, bir bilgisayar sisteminde aynı anda birden fazla işletim sisteminin çalıştırılması anlamına gelir. Sanallaştırmayı kullanmamızın birçok nedeni vardır. Bu nedenlerden en yaygın olanı ise, bilgisayar değiştirmek veya uygulamalarımızı farklı platformlarda test etmek ve ve vee linux ile windows işletim sistemlerinin ikisine’de ihtiyacın doğması. Kendimden örnek vermek gerekirse; kişisel bilgisayarıma linux(herhangi birisi) kurulumu yapınca tam istediğim performansta çalışmaması durumunda sanal olarak linux kullanmam gösterilebilir.</description>
     </item>
