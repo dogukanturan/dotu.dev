@@ -29,10 +29,10 @@ menu:
       name: Search
       url: /search/
       weight: 40
-    - identifier: gpg
-      name: GPG
-      url: /gpg/
-      weight: 50
+    # - identifier: gpg
+    #   name: GPG
+    #   url: /gpg/
+    #   weight: 50
 
 outputs:
   home:
