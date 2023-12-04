@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/dturan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dotu.dev
+  * I am dturan (https://keybase.io/dturan) on keybase.
+  * I have a public key ASDALGv9u23RwUriATK_Z3CRqDrFX6C22JqzeyW9kXZfnAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c02c6bfdbb6dd1c14ae20132bf677091a83ac55fa0b6d89ab37b25bd91765f9c0a",
+      "host": "keybase.io",
+      "kid": "0120c02c6bfdbb6dd1c14ae20132bf677091a83ac55fa0b6d89ab37b25bd91765f9c0a",
+      "uid": "e3bb7534e8faa2ed1f54f6e004f17519",
+      "username": "dturan"
+    },
+    "merkle_root": {
+      "ctime": 1676228281,
+      "hash": "93297a9689b9de35a1da91cf3d3aefd44d3b73cdd2a36e3021b0c59569f685957311f194f1e8347a3fc9b7f2112823beb4c7da2bcc070f92f7dddd1154ecfbe1",
+      "hash_meta": "2ea300f5723d2bc8ea755c658fd2b1a45385bf413f7c0d3b8aa3fd2414b7c1e2",
+      "seqno": 24036072
+    },
+    "service": {
+      "entropy": "+lzHHxAWaWGvh4sUPXrDQ8rH",
+      "hostname": "dotu.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.4"
+  },
+  "ctime": 1676228329,
+  "expire_in": 504576000,
+  "prev": "f0b9dac9ec625f603f5f9e672535843f464e757119cb2fefe72842a524b38950",
+  "seqno": 48,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgwCxr/btt0cFK4gEyv2dwkag6xV+gttias3slvZF2X5wKp3BheWxvYWTESpcCMMQg8LnayexiX2A/X55nJTWEP0ZOdXEZyy/v5yhCpSSziVDEIO2Eml3Gjc/sM9RPz3KGt8Ypk4MVVRBMSFJ0lu6cv/OJAgHCo3NpZ8RAlpasYVPYigCrfqRunouukvkzrhbMdJVSNed45Jp9EkD2rFUOxuw1D5gtbUUJxlsLGhugfj4twen1gc3z1bGpAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII89hyalDsZimbkX0+xGfrhQhwkp+WkSOFbx+qa6Zr7Zo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dturan
+
+==================================================================
