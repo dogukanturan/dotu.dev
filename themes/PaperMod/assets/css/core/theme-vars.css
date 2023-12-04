@@ -20,7 +20,7 @@
 .dark {
     --theme: rgb(0, 0, 0);
     --entry: rgb(0, 0, 0);
-    --primary: rgb(217, 255, 0);
+    --primary: rgb(140, 255, 0);
     --secondary: rgb(155, 156, 157);
     --tertiary: rgb(24, 55, 90);
     --content: rgb(196, 196, 197);
