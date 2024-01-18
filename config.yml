@@ -106,8 +106,6 @@ params:
         url: "/index.xml"
       - name: PGP
         url: "/pgp"
-      - name: Keybase
-        url: "https://keybase.io/dturan"
 
   cover:
       hidden: false
