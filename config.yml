@@ -42,7 +42,7 @@ params:
   env: production
   title: DevOpsGuy
   description: "A personal blog where I write what I've learned in devops and IT world"
-  keywords: [DevOps, Software, Developer, DevSecOps]
+  keywords: [DevOps, Software, Developer, DevSecOps, Cloud, GCP, AWS]
   author: Dogukan Turan
   DateFormat: "2006 January 2"
   defaultTheme: dark
@@ -92,6 +92,8 @@ params:
             url: posts
           - name: Archives
             url: archives
+          - name: CV
+            url: https://rxresu.me/dogukanturanx/dogukan-turan
 
   socialIcons:
       - name: github
