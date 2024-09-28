@@ -1,0 +1,117 @@
+baseURL: "https://dotu.dev/"
+title: "Dogukan Turan"
+paginate: 1000
+theme:
+  - PaperMod
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+# disableKinds: ["sitemap"]
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: archives
+      name: Blog
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 100
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: DevOpsGuy
+  description: "A personal blog where I write what I've learned in devops and IT world"
+  keywords: [DevOps, Software, Developer, DevSecOps]
+  author: Dogukan Turan
+  DateFormat: "2006 January 2"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: false # to disable highlight.js
+    disableFingerprinting: true
+    favicon: "/posts/me.jpeg"
+    favicon16x16: "/posts/me.jpeg"
+    favicon32x32: "/posts/me.jpeg"
+    apple_touch_icon: "/posts/me.jpeg"
+    safari_pinned_tab: "/posts/me.jpeg"
+
+  label:
+    text: "~/dogukan"
+    icon: ""
+    iconHeight: 45
+
+  homeInfoParams:
+    Title: ":(){ :|:& };:"
+    Content: ""
+
+  profileMode:
+    enabled: true
+    title: "Hello There"
+    subtitle: "DevOps & Cloud"
+    imageUrl: "/posts/me.jpeg"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Archives
+        url: archives
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/dogukanturan"
+    - name: linkedin
+      url: "https://linkedin.com/in/dogukanturan"
+    - name: medium
+      url: "https://devopsguy.medium.com"
+    - name: twitter
+      url: "https://twitter.com/imdotu"
+    - name: email
+      url: "mailto:mail@dogukanturan.com"
+    - name: cv
+      url: "https://rxresu.me/dogukanturanx/dogukan-turan-public"
+
+  cover:
+    hidden: false
+    hiddenInList: true
+    hiddenInSingle: false
+    linkFullImages: false
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]

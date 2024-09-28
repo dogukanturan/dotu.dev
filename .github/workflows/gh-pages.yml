@@ -1,0 +1,36 @@
+name: Deploy Github Pages with Action
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+          submodules: true
+          fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+          hugo-version: 'latest'
+
+    - name: Clean public directory
+      run: rm -rf public
+
+    - name: Build
+      run: hugo --minify --verbose
+
+    - name: Create cname file
+      run: echo 'dotu.dev' > public/CNAME
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.TOKEN }}
+          publish_dir: ./public
