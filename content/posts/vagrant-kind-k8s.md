@@ -24,7 +24,8 @@ Yani bugün vagrant ile ayağa kaldırdığımız sunucuya docker ve kind kurara
 Başlamadan önce Vagrant’ın ne olduğuna biraz değinelim. Vagrant, sanal makine oluşturmak ve oluşturulan sanal makineleri yönetmek için kullanılan oldukça kullanışlı bir araçtır. Bizde vagrant ile bir sanal ubuntu makinesi oluşturacağız. Ben aşağıdaki gibi bir Vagrantfile hazırladım ve sunucu özelliklerini minimum düzeyde tuttum. Sizde burdaki ayarları kendinize göre değiştirebilirsiniz.
 
 Şimdi bu Vagrantfile’ı çalıştırdığımızda bize ubuntu-16.04 sürümünde, belli bir cpu ve memory kullanan ve ip adresini belirlediğimiz bir ubuntu sunucusu ayağa kaldıracak. Terminalimizden bu Vagrantfile’ın bulunduğu path’e gidiyoruz ve sırasıyla aşağıdaki komutu yazıyoruz.
-```
+
+```shell
 vagrant up 
 vagrant ssh kind
 ```
@@ -34,7 +35,8 @@ vagrant up komutu ile bento/ubuntu-16.04 box’ını çektik ve ayağa kaldırd�
 # 2) Docker Kurulumu
 
 Docker’ı hızlı bir şekilde kurmak için bu adresten kullandığınız ortama uygun olarak kurabilirsiniz. Bende docker’ın kendi kurulum talimatlarını referans alarak sizlere ubuntu için gereken adımları aşağıya sıralı olarak ekleyeceğim. Bunları adım adım vagrant ile ayağa kaldırdığınız sunucuda uygulayabilirsiniz.
-```
+
+```shell
 $ sudo apt-get update -y  $ sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -47,9 +49,11 @@ $ sudo apt-get update -y  $ sudo apt-get install -y \
 ```
 
 Kurulum adımlarını yaptıktan sonra şimdi başlayıp silinecek bir test container’ı başlatalım.
-```
+
+```shell
 $ docker run --rm hello-world &amp;&amp; docker rmi hello-world
 ```
+
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*NZF8jrHp1kCLCQY3TQAnpw.png)
 
 Eğer yukarıdaki gibi bir çıktı aldıysanız docker’da başarılı bir şekilde kurulmuş demektir.
@@ -57,7 +61,8 @@ Eğer yukarıdaki gibi bir çıktı aldıysanız docker’da başarılı bir şe
 # 3) Kind Kurulumu
 
 Kind’ı kurmak için buradaki github adresine gidebilirsiniz ve sizin sisteminize uygun olan kind sürümünü kurabilirsiniz. Linux kullananlar benim yaptığım işlemleri yapabilir.
-```
+
+```shell
 $ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64 $ chmod +x ./kind $ sudo mv kind /usr/local/bin/ $ kind version
 ```
 
@@ -66,7 +71,8 @@ $ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64 $ chmod +x
 # 4) Kubectl Kurulumu
 
 Şimdi kubernetes api ile konuşmamız için gerekli olan kubectl aracını kurmamız gerekmekte. Bu adresten kurulumu kendi sisteminize göre yapabilirsiniz.
-```
+
+```shell
 $ curl -LO &quot;https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl&quot;
 $ chmod +x ./kubectl
 $ sudo mv ./kubectl /usr/local/bin/kubectl
@@ -82,7 +88,8 @@ Kind docker container olarak çalışmakta ve bu yüzden biz araya label(vagrant
 ## 5.1) Sanal Sunucu (vagrant, vmware vb.) Kullanmayanlar İçin Cluster Kurma
 
 Eğer siz harici bir sunucu veya vagrant kullanmıyorsanız aşağıda belirtilen dosyayı oluşturmanıza gerek yok direk aşağıdaki komut ile node’u çalıştırabilirsiniz.
-```
+
+```shell
 $ kind create cluster --name NODE-ISMI
 ```
 
@@ -91,7 +98,8 @@ Yukarıdaki komutu çalıştırarak işleminize devam edebilirsiniz `— name`  
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*X4P3LQ0kqPGa07EeqTLuZw.png)
 
 Eğer böyle bir ekran görüyorsanız tebrikler node’unuz hazır. Şimdi node’umuzu görmek için aşağıdaki komutu yazıyoruz ve karşımıza node’umuz ile ilgili bir kaç bilgi çıkmakta.
-```
+
+```shell
 $ kubectl get node 
 ```
 
@@ -104,7 +112,8 @@ Evet artık bir uygulama ile test edebiliriz. Aşağıda örnek bir deployment.y
 Burda yaptığımız işlem aslında şu; master node’umuzda 30080 portunu açmasını söylüyoruz böylece node içerisinde 30080 portunda çalışan bir uygulama olduğu takdirde dışardan bu uygulamaya erişebileceğiz. Hemen test bir deployment üzerinde deneyelim.
 
 Şimdi bu deployment.yaml dosyası ile bir deployment ve service oluşturuyoruz. Basitçe bir nginx çalıştırıyoruz aslında. Service kısmında gördüğünüz üzere bu service’in type’ı olarak NodePort kullanıyorum ve nodePort olarak da 30080 portunu verdim. Hatırlarsanız kindconfig.yaml dosyasında da bu portu kullanmıştık. Şimdi uygulamamızı ayağa kaldıralım bunun için;
-```
+
+```shell
 $ kubectl apply -f deployment.yaml 
 ```
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*CrBifTqE-iwUZ0952M0D2w.png)
@@ -113,7 +122,8 @@ Yukarıdaki resimdeki gibi pod’unuzun STATUS değeri Running ise başarılı b
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*wsZ8rfgdha7hZy6BUoAgNA.png)
 
 Yukarıdaki gibi bir ekran sizi karşılıyorsa uygulamanız ve node’unuz başarılı bir şekilde çalışıyor demektir. İşiniz bittiğinde cluster’ı silmek için aşağıdaki komutu kullanmanız gerekiyor.
-```
+
+```shell
 $ kind delete clusters [NODE-NAME]
 ```
 

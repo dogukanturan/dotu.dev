@@ -46,7 +46,7 @@ Linux ortamına helm kurabilmek için aşağıda ki adımları terminal ortamın
 
 >**Unutmadan:** Helmi kullanabilmek için kubernetes clusterımızın olması gerekiyor. Eğer herhangi bir kubernetes clusterınız yoksa ve hızlı bir şekilde kubernetes clusterı kurmak istiyorsanız [K3D ile K3S Kubernetes Cluster Kurulumu](https://kartaca.com/k3d-ile-k3s-kubernetes-cluster-kurulumu/) adlı yazımı okuyabilirsiniz.
 
-```bash
+```shell
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
@@ -84,7 +84,7 @@ demo
 
 Helm tarafından oluşturulan bu chart aslında çoğu ihtiyacımızı karşılıyor. Temel kubernetes kaynakları bu chart içerisinde `templates` klasöründe bulunmakta. Şimdi `Chart.yaml` dosyamızın içeriğini inceleyelim.
 
-```
+```yaml
 apiVersion: v2
 name: demo
 description: A Helm chart for Kubernetes
@@ -100,7 +100,7 @@ appVersion: "1.16.0"
 
 Uygulamamızı kubernetes clusterında dağıtmak için birden fazla yöntem bulunmakta. Aşağıdaki komutlar, oluşturulan uygulamayı kubernetes ortamında nasıl dağıtabileceğimizi göstermekte.
 
-```
+```shell
 $ cd demo/
 $ helm install demo .
 ```
@@ -111,7 +111,7 @@ $ helm install demo .
 
 Kurulumun ardından `kubectl get pods` ile podların durumunu görebiliriz.
 
-```bash
+```shell
 $ kubectl get pods
 
 NAME                    READY   STATUS    RESTARTS   AGE
@@ -129,20 +129,20 @@ $ helm package .
 
 paketleme işleminin ardından `ls` ile dizini kontrol ettiğimizde `*.tgz` ile biten bir arşiv dosyası oluşmalı.
 
-```bash
+```shell
 $ ls
 charts  Chart.yaml  demo-0.1.0.tgz  templates  values.yaml
 ```
 
 Şimdi demo uygulamasını `demo-2` ile tekrar dağıtalım. Bunun için yukarıda kullandığımız `helm install` komutunu kullanacağız fakat bu sefer dizini belirttiğimiz `.` yerine `*.tgz` dosyamızı vereceğiz.
 
-```bash
+```shell
 $ helm install demo-2 demo-0.1.0.tgz
 ```
 
 Ardından `helm ls` komutu ile aktif chartlarımızı görebiliriz.
 
-```bash
+```shell
 NAME    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
 demo    default         1               2022-01-16 20:20:18.996794236 +0300 +03 deployed        demo-0.1.0      1.16.0
 demo-2  default         1               2022-01-16 20:23:54.947237373 +0300 +03 deployed        demo-0.1.0      1.16.0
@@ -153,7 +153,7 @@ demo-2  default         1               2022-01-16 20:23:54.947237373 +0300 +03 
 
 Dağıtılan chartı kaldırmak için `helm uninstall` kullanabiliriz. Bu komut, uygulamaya ait tüm kaynakları (deployment, service, ingress vb.) kubernetes clusterımızdan kaldırır. Yukarıda deploy ettiğimiz `demo-2` chartını kaldırmak için aşağıdaki komutu kullanmamız gerekiyor.
 
-```bash
+```shell
 $ helm uninstall demo-2
 ```
 

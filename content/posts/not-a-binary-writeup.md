@@ -27,6 +27,4 @@ Sorunun ipucunda bize word wrap kullanmamız gerektiğini söylüyordu ve word w
 Bir süre düşündükten sonra vscode penceresini yakınlaştırıp sağa sola taşıdım ve 0&#x27;ları(önemli değil 1&#x27;lerde olabilir) seçtiğimde flag karşımızdaydı :)
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZZui5WRY0daSQw48xrFeuQ.png)
 
-**FLAG: STMCTF{dotMATRIX}**
-
-## Written by Dogukan Turan
+## FLAG: STMCTF{dotMATRIX}

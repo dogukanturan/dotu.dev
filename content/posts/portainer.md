@@ -38,7 +38,8 @@ Bulunduğum makinede “portainer” adında bir dizin oluşturuyorum ve bu port
 Klasörümün içerisine giriyorum ve docker-compose.yml dosyamı düzenlemeye başlıyorum.
 
 ***Not:*** *Ben uzak sunucudaki dosyalarımı düzenlemek için visual studio code remote ssh eklentisini kullanıyorum.*
-```
+
+```yaml
 version: &#x27;3.8&#x27;
 services:
   portainer:
@@ -55,6 +56,7 @@ services:
 ```
 
 Evet docker-compose.yml dosyamız yukarıdaki gibi olmalı. Şimdi adım adım neler yaptığımıza bakalım.
+
 - **Version:**  Docker daemon ile uyumlu olan son compose sürümünü kullanıyorum. Siz hangi versiyonu kullanmanız gerektiğini bilmiyorsanız bu adresten inceleyebilirsiniz. (docker 19.03.11 sürümünü kullanıyorum sizde son docker sürümünü kullanıyorsanız bunu son sürüm olan 3.8 olarak bırakabilirsiniz.)
 - **Services:**  Bir servis oluşturacağımı söylüyorum docker’a
 - **Portainer:**  Servisimizin adınızı belirliyoruz.
@@ -66,16 +68,20 @@ Evet docker-compose.yml dosyamız yukarıdaki gibi olmalı. Şimdi adım adım n
 - **Volumes.portainer_data:**  Direk kendi hostumuzdan bir path’i docker volume’e bind olarak vermediğimiz için portainer_data adında bir volume tanımlaması yapıyoruz ve bunu üst satırda kullanıyoruz.
 
 Evet compose dosyamızı açıkladığımıza göre şimdi portainer’ı ayağa kaldırabiliriz. Terminalden docker-compose.yml dosyamızın olduğu konuma geliyoruz ve aşağıdaki komutu çalıştırıyoruz.
-```
+
+```shell
 $ docker-compose up -d
 ```
 
 Not: Sonda --d/--detach olarak belirttiğimiz komut şunu yapıyor. Compose’u ayağa kaldırırken lütfen bana yaptığın işleme ait logları gösterme. Bırak kardeşim terminali bana!
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*2IbEUwhE2KeFLZL_ZdVu_A.png)
+
 - Karşımıza bu şekilde bir çıktı gelmesi gerekiyor, image’i hub.docker.com’dan pull etti ve container’ımızı belirttiğimiz ayarlar ile ayağa kaldırdı. Bakalım gerçekten de çalışan bir container’ımız varmı. Bunun için aşağıdaki komut ile bulunduğumuz dizindeki compose dosyasının çalıştırdığı container’ları listelemiş olduk.
-```
+
+```shell
 $ docker-compose ps
 ```
+
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*mb-wO6cGR4A68QqkkQH-7w.png)
 - Evet bir adet portainer ayakta. Şimdi bu container’a erişelim ve kullanıcımızı oluşturalım
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*G8iTFX3vGUjvkIDdvK19KA.png)
@@ -108,7 +114,8 @@ Evet iki adet container’ımız terminaldede gözükmekte. Şimdi tarayıcımı
 ## Container’a Bağlanma
 
 Nginx container’ımıza terminal üzerinden bağlanmak için öncelikle bağlanacağımız uygulamanın container-id’sini öğrenmemiz gerekicekti ve daha sonrasında aşağıdaki komutu terminalimizden girmemiz gerekicekti. Biraz can sıkıcı değil mi :(
-```
+
+```shell
 $ docker exec -it [container-id] /bin/bash
 ```
 
@@ -116,14 +123,17 @@ $ docker exec -it [container-id] /bin/bash
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*oiNZfMRENMd_Mhz_6pgjnw.png)
 
 Evet web üzerinden container’ımızın shell’ine eriştik. Şimdi container’ımızı güncelleyelim ve değişiklik yapabilmek için vim’i yükleyelim.
-```
+
+```shell
 $ apt update -y &amp;&amp; apt install vim -y
 ```
 
 Komutu girdikten sonra vim ile index.html dosyasını açalım bunun için aşağıdaki komutu terminale giriyoruz.
-```
+
+```shell
 $ vim /usr/share/nginx/html/index.html
 ```
+
 ![Medium-Image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*aZ2Eb0JtcSmUf6Grdged9w.png)
 
 Evet nginx index.html dosyamıza eriştik burda dilediğiniz gibi değişiklikler yapın ve kaydettikten sonra web üzerinden tekrar nginx’i açın.
