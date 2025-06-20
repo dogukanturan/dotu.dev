@@ -96,8 +96,6 @@ params:
       url: "https://twitter.com/imdotu"
     - name: email
       url: "mailto:mail@dogukanturan.com"
-    - name: cv
-      url: "https://rxresu.me/dogukanturanx/dogukan-turan-public"
 
   cover:
     hidden: false
